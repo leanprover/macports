@@ -1,0 +1,28 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+
+PortSystem          1.0
+PortGroup           cmake 1.0
+PortGroup           github 1.0
+
+name                lean
+categories          lang math
+platforms           darwin
+maintainers         cs.cmu.edu:soonhok
+description         Lean Theorem Prover
+long_description    Lean is a new open source theorem prover being developed at Microsoft Research, \
+                    and its standard library at Carnegie Mellon University. The Lean Theorem Prover \
+                    aims to bridge the gap between interactive and automated theorem proving, by \
+                    situating automated tools and methods in a framework that supports user interaction \
+                    and the construction of fully specified axiomatic proofs. The goal is to support \
+                    both mathematical reasoning and reasoning about complex systems, and to verify \
+                    claims in both domains.
+license             Apache-2.0
+homepage            http://leanprover.github.io
+github.setup        leanprover lean master
+depends_lib         port:gmp \
+                    port:mpfr \
+                    port:lua
+depends_build       port:cmake
+checksum            { }
+configure.args-append src/
