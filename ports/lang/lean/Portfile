@@ -19,7 +19,13 @@ long_description    Lean is a new open source theorem prover being developed at 
                     claims in both domains.
 license             Apache-2.0
 homepage            http://leanprover.github.io
-github.setup        leanprover lean master
+
+set git_shasum      78d8e79000b4a8c7b12b8da072bb8a8d3d604425
+set git_date        20150306024808
+
+github.setup        leanprover lean ${git_shasum}
+version             0.2.0.${git_date}.${git_shasum}
+
 depends_lib         port:gmp \
                     port:mpfr \
                     port:lua
