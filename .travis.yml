@@ -11,6 +11,10 @@ install:
  - cp /opt/local/etc/macports/sources.conf .
  - echo "https://leanprover.github.io/macports/ports.tar" >> sources.conf
  - sudo mv -f sources.conf /opt/local/etc/macports/sources.conf
+ - cp /opt/local/etc/macports/archive_sites.conf . 
+ - echo "name lean" >> archive_sites.conf
+ - echo "urls http://leanprover.github.io/macports/" >> archive_sites.conf
+ - sudo mv -f archive_sites.conf /opt/local/etc/macports/archive_sites.conf
 
 script:
  - sudo port -v sync
