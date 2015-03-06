@@ -1,0 +1,24 @@
+language: objective-c
+
+install:
+ - stty rows 40 columns 80 # set rows, columns in terminal
+ - wget https://distfiles.macports.org/MacPorts/MacPorts-2.3.3.tar.bz2
+ - tar xvfj MacPorts-2.3.3.tar.bz2
+ - cd MacPorts-2.3.3
+ - ./configure && sudo make install
+ - export PATH=/opt/local/bin:$PATH
+ - sudo port -v selfupdate
+ - cp /opt/local/etc/macports/sources.conf .
+ - echo "https://leanprover.github.io/macports/ports.tar" >> sources.conf
+ - sudo mv -f sources.conf /opt/local/etc/macports/sources.conf
+
+script:
+ - sudo port -v sync
+ - sudo port -v install lean
+
+notifications:
+  email:
+    recipients:
+     - soonho.kong@gmail.com
+    on_success: change
+    on_failure: always
