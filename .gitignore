@@ -1,0 +1,5 @@
+*.swp
+ports/lang/lean/work
+lean/
+PortIndex
+PortIndex.quick
