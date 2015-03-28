@@ -29,5 +29,5 @@ sudo port install lean
 
 How to Maintain
 ---------------
-
- - run `update.sh`
+ - Follow the above installation instructions. `update.sh` script assumes that there is a pre-installed macport version of Lean and tries to upgrade it to the latest version.
+ - Run `update.sh`, if necessary use `-f` option to force upgrade.
