@@ -31,4 +31,8 @@ depends_lib         port:gmp \
                     port:lua
 depends_build       port:cmake
 checksum            { }
-configure.args-append src/
+
+post-extract            { file mkdir ${workpath}/build }
+default configure.post_args {../${worksrcdir}/src}
+default configure.dir       {${workpath}/build}
+default build.dir           {${workpath}/build}
