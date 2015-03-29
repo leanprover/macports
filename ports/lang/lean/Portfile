@@ -20,8 +20,8 @@ long_description    Lean is a new open source theorem prover being developed at 
 license             Apache-2.0
 homepage            http://leanprover.github.io
 
-set git_shasum      0cda3f7cbf873e765677a1e36a46c0d5538fdbae
-set git_date        20150328075632
+set git_shasum      8243ed63399ff15079cbec99a2e534c10a1ca660
+set git_date        20150328232952
 
 github.setup        leanprover lean ${git_shasum}
 version             0.2.0.${git_date}.${git_shasum}
@@ -31,4 +31,8 @@ depends_lib         port:gmp \
                     port:lua
 depends_build       port:cmake
 checksum            { }
-configure.args-append src/
+
+post-extract            { file mkdir ${workpath}/build }
+default configure.post_args {../${worksrcdir}/src}
+default configure.dir       {${workpath}/build}
+default build.dir           {${workpath}/build}
