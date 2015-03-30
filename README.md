@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/leanprover/macports.svg?branch=master)](https://travis-ci.org/leanprover/macports)
-
-Macports Repository for Lean
+Macports Repository for Lean [![Build Status](https://travis-ci.org/leanprover/macports.svg?branch=master)](https://travis-ci.org/leanprover/macports)
 ============================
 
 How to Use
