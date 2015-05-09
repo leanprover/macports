@@ -20,8 +20,8 @@ long_description    Lean is a new open source theorem prover being developed at 
 license             Apache-2.0
 homepage            http://leanprover.github.io
 
-set git_shasum      e59456c19f9841b58db68330b4040fb113458ac7
-set git_date        20150508194513
+set git_shasum      f8e2f68ce0f7ab264231fccd42695327b6f4f77e
+set git_date        20150508230521
 
 github.setup        leanprover lean ${git_shasum}
 version             0.2.0.${git_date}.${git_shasum}
