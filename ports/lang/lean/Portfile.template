@@ -30,6 +30,7 @@ depends_lib         port:gmp \
                     port:mpfr \
                     port:lua
 depends_build       port:cmake
+depends_run         port:ninja
 checksum            { }
 
 post-extract            { file mkdir ${workpath}/build }
